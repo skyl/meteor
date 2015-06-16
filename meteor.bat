@@ -35,8 +35,8 @@ IF EXIST "%~dp0\.git" (
   SET METEOR_INSTALLATION=%~dp0
 )
 
-SET NODE_PATH="%~dp0\dev_bundle\lib\node_modules"
-SET BABEL_CACHE_DIR="%~dp0\.babel-cache"
+SET NODE_PATH=%~dp0\dev_bundle\lib\node_modules
+SET BABEL_CACHE_DIR=%~dp0\.babel-cache
 
 "%~dp0\dev_bundle\bin\node.exe" "%~dp0\tools\main-transpile-wrapper.js" %*
 ENDLOCAL
