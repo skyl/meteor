@@ -21,7 +21,7 @@ var packageJson = {
   version: "0.0.0",
   dependencies: {
     fibers: fibersVersion,
-    "meteor-promise": "0.2.2",
+    "meteor-babel": "0.1.10",
     // Not yet upgrading Underscore from 1.5.2 to 1.7.0 (which should be done
     // in the package too) because we should consider using lodash instead
     // (and there are backwards-incompatible changes either way).
@@ -54,8 +54,7 @@ var packageJson = {
     // https://github.com/williamwicks/node-eachline/pull/4
     eachline: "https://github.com/meteor/node-eachline/tarball/ff89722ff94e6b6a08652bf5f44c8fffea8a21da",
     cordova: "5.0.0",
-    pathwatcher: "4.1.0",
-    "meteor-babel": "0.1.8"
+    pathwatcher: "4.1.0"
   }
 };
 
