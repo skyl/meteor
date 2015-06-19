@@ -479,9 +479,9 @@ amplify.request = function( resourceId, data, callback ) {
 
 	if ( !resource ) {
 		if ( !settings.resourceId ) {
-			throw "amplify.request: no resourceId provided";
+			throw new Error("amplify.request: no resourceId provided");
 		}
-		throw "amplify.request: unknown resourceId: " + settings.resourceId;
+		throw new Error("amplify.request: unknown resourceId: ") + settings.resourceId;
 	}
 
 	if ( !amplify.publish( "request.before", settings ) ) {
@@ -498,7 +498,7 @@ amplify.request.resources = {};
 amplify.request.define = function( resourceId, type, settings ) {
 	if ( typeof type === "string" ) {
 		if ( !( type in amplify.request.types ) ) {
-			throw "amplify.request.define: unknown type: " + type;
+			throw new Error("amplify.request.define: unknown type: ") + type;
 		}
 
 		settings.resourceId = resourceId;
