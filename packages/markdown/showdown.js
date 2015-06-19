@@ -244,7 +244,7 @@ if (converter_options && converter_options.extensions) {
 				}
 			});
 		} else {
-			throw "Extension '" + plugin + "' could not be loaded.  It was either not found or is not a valid extension.";
+			throw new Error("Extension '" + plugin + "' could not be loaded.  It was either not found or is not a valid extension.");
 		}
 	});
 }
